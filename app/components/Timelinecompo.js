@@ -1,12 +1,22 @@
-"use client";
+import CommentCompo from "./commentCompo";
+
+
 
 const Timelinecompo = ({ posts }) => {
-  console.log("posts", posts);
+
+
+
   return (
-    <div>
-      {posts?.map((item, index) => (
-        <h1 className="text-red-500">{item?.title}</h1>
-      ))}
+    <div className="max-w-7xl mx-auto">
+      <div className="grid grid-cols-3 gap-3">
+        {posts?.map((item, index) => (
+          <div className="bg-white shadow-md p-3" key={index}>
+    
+            <p>{item?.title}</p>
+            <CommentCompo postID={item?.id} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
