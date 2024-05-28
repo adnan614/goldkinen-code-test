@@ -2,83 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: white
 }
 
 
-input[type="text"] {
-  color: #000 !important;
-}
 
-
-.cat:hover .subCat{
-  display: block;
-}
-
-.cat:hover .cat_p{
-  color: #000;
-}
-
-.cat:hover .cat_svg{
-  fill: #000;
-}
-
-.subCatContent:hover .subCatContent_p{
-   color: #000;
-}
- 
-.subCatContent:hover .subCatContent_svg{
-   fill: #000;
-}
-
-.subCatContent:hover .subsubCat{
-  display: block;
-}
-
-
-.subsubCatcontent:hover .subsubCatcontent_p{
-   color: #000;
-}
-
-
-@layer utilities {
-  .grayscale {
-    filter: grayscale(100%);
-  }
-}
-
-
- .my-otp-input {
-  background-color: #f7f7f7;
-  border: none;
-  border-radius: 4px;
-  font-size: 24px;
-  font-weight: bold;
-  height: 56px;
-  margin: 0 8px;
-  text-align: center;
-  width: 50px !important;
-  color: #333333; /* default color */
-}
